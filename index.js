@@ -26,11 +26,11 @@ const idea = mongoose.model('ideas')
 require('./config/passport')(passport);
 
 
-app.engine('hbs', expressHandlebars({
+app.engine('handlebars', expressHandlebars({
     defaultLayout: 'main'
 }));
 
-app.set('view engine', 'hbs');
+app.set('view engine', 'handlebars');
 // Index route
 app.get('/', (req, res) => {
     const title = 'Welcome to the application';
